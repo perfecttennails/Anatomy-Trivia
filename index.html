@@ -16,20 +16,16 @@
 
 <body>
     <section>
-    <h1 class="heading"> Anatomy Trivia</h1>
+        <h1 class="heading"> Anatomy Trivia</h1>
+        <div id="game-area"> <!-- the outer frame around the quiz-->
 
-    <div class="score-area">
-        <p class="scores">Correct <span id="score">0</span></p>
-        <p class="scores">Incorrect <span id="incorrect">0</span></p>
-    </div>
-
-    <div class="game-area">
-        <!-- the outer frame around the quiz-->
-
-        <div id="quiz-box">
-            <!--questions area-->
+             <div class="score-area"><!--score tracker-->
+            <p class="scores">Correct <span id="correct">0</span></p>
+            <p class="scores">Incorrect <span id="incorrect">0</span></p>
+        </div>
+             <!--questions area-->
             <div id="question-box">
-                <h2 id="question"></h2>
+                <h2 id="question">testing</h2>
             </div>
 
             <div id="answer-box"> <!--answers/alternatives-->
@@ -39,11 +35,13 @@
                 <button class="answer-button"></button>
             </div>
 
-            <button type="reset" class="btn btn--big btn--green">Restart Quiz</button>
-            <button type="button" class="btn btn--big btn--blue">Next Question</button>
+        
+
+            <div id="quiz-navigation"> <!--bottom navigation-->
+            <button type="reset" class="btn--green">Restart Quiz</button>
+            <button type="button" class="btn--blue">Next Question</button>
+    </div>
         </div>
-
-
         <script src="assets/js/script.js"></script>
     </section>
 </body>

@@ -1,6 +1,108 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Work+Sans:wght@300&display=swap');
 
-img {
-    width: 2px;
-    height: 2px;
+body {
+    background-color: grey;
+    background: url('../images/flowers-1.jpg') no-repeat center top;
+    background-size: cover;
+    height: 50%;
+    padding: 0%;
+}
+
+
+h1 {
+    font-family: Montserrat, Work Sans, sans-serif;
+    text-align: center;
+    font-size: 250%;
+    font-weight: 700;
+}
+
+#game-area {
+    height: 500px;
+    width: 70%;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 10px 10px;
+    box-shadow: 0 0 7px;
+    opacity: 0.9;
+}
+.scores {
+    display: inline-block;
+    align:top-left;   
+    margin: 20px;
+}
+
+.score-area {
+    margin: 30px;
+    width: 60%;
+    font-size: 1.6rem;
+    align:left;
+}
+
+#correct {
+    color: green;
+    font-weight: bold;
+}
+
+#incorrect {
+    color: red;
+    font-weight: bold;
+}
+
+#question-box {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+
+#question {
+    font-family: Montserrat, Work Sans, sans-serif;
+    font-weight: 300;
+    font-size: 200%;
+}
+
+#answer-box {
+    height: 100px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.answer-button {
+    font-family:Montserrat, Work Sans, sans-serif;
+    font-size: 100%;
+    font-weight: 400;
+    height: 60%;
+    width: 40%;
+    margin: 1%;
+    border: 0.5px solid gray;
+    border-radius: 10px 10px;
+}
+
+#quiz-navigation {
+    font-family: Montserrat, Work Sans, sans-serif;
+    text-align: right;
+    margin-right: 2%;
+    margin-top: 2%;
+
+}
+
+ 
+.btn--green {
+    border: 5px;
+    background-color:green;
+    border-radius: 10px 10px;
+    height: 30px;
+    
+    
+}
+
+.btn--blue {
+    border: 5px;
+    background-color: blue;
+    border-radius: 10px 10px;
+    height: 30px;
 }
