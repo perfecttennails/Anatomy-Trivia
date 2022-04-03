@@ -26,8 +26,7 @@ h1 {
     opacity: 0.9;
 }
 .scores {
-    display: inline-block;
-    align:top-left;   
+    display: inline-block;   
     margin: 20px;
 }
 
@@ -35,7 +34,7 @@ h1 {
     margin: 30px;
     width: 60%;
     font-size: 1.6rem;
-    align:left;
+    
 }
 
 #correct {
@@ -84,25 +83,22 @@ h1 {
 
 #quiz-navigation {
     font-family: Montserrat, Work Sans, sans-serif;
-    text-align: right;
+    text-align: center;
     margin-right: 2%;
-    margin-top: 2%;
-
+    margin-top: 7%;
 }
 
  
 .btn--green {
-    border: 5px;
-    background-color:green;
-    border-radius: 10px 10px;
-    height: 30px;
-    
-    
+    border: 10px;
+    background-color:rgb(91, 180, 91);
+    border-radius: 50%;
+    height: 50px;   
 }
 
 .btn--blue {
-    border: 5px;
-    background-color: blue;
-    border-radius: 10px 10px;
-    height: 30px;
+    border: 10px;
+    background-color: rgb(225, 178, 107);
+    border-radius: 50%;
+    height: 50px;
 }
