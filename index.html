@@ -8,27 +8,44 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
 
-        <title>Anatomy Trivia</title>
+    <title>Anatomy Trivia</title>
 
 </head>
 
 <body>
-    <h1 class="heading">
-        <img src=""> Anatomy Trivia</h1>
-
-    <div class="game-area"></div>
+    <section>
+    <h1 class="heading"> Anatomy Trivia</h1>
 
     <div class="score-area">
-        <p class="scores">Correct Answers <span id="score">0</span></p>
-        <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
+        <p class="scores">Correct <span id="score">0</span></p>
+        <p class="scores">Incorrect <span id="incorrect">0</span></p>
     </div>
-    
-    <div class="question-area"></div>
-    
-    
-    <script src="assets/js/script.js"></script>
+
+    <div class="game-area">
+        <!-- the outer frame around the quiz-->
+
+        <div id="quiz-box">
+            <!--questions area-->
+            <div id="question-box">
+                <h2 id="question"></h2>
+            </div>
+
+            <div id="answer-box"> <!--answers/alternatives-->
+                <button class="answer-button"></button>
+                <button class="answer-button"></button>
+                <button class="answer-button"></button>
+                <button class="answer-button"></button>
+            </div>
+
+            <button type="reset" class="btn btn--big btn--green">Restart Quiz</button>
+            <button type="button" class="btn btn--big btn--blue">Next Question</button>
+        </div>
+
+
+        <script src="assets/js/script.js"></script>
+    </section>
 </body>
 
 </html>
