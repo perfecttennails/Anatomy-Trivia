@@ -4,8 +4,9 @@ This puzzle is for all ages.
  30+ Questions About The Gross, Coolest, And Craziest Facts About The Human Body.
 
  You can view the live site [here!]()
-
-
+## Fonts and icons
+- fonts from google font
+- icons from font awsome
 
  ## Credits
 

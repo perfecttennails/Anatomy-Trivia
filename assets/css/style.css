@@ -1,6 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&family=Roboto:ital,wght@0,300;1,500&display=swap');
 body {
-    background-image: url("flowers.jpg") no repeat center;
-    background-color: rgb(219, 150, 150);
-     height: 100vh;
-    padding: 0%;
+    background-color: lightpink;
+}
+
+h1 {
+    font-family: Heebo, Roboto, sans-serif;
+    text-align: center;
+
+
+}
+.game-area {
+    background-image: url('..images/flowers1.jpg');
+    background-size: cover;
+    height:80vh;
+    width:80vh;
+    padding:2px;
+    border-radius: 20px;
+}  
+
+.question-area{
+padding: auto;
+}
+
+.answer-box {
+padding: auto;
+}
+
+.score-area {
+padding: auto;
 }
