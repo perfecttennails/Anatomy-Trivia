@@ -17,30 +17,35 @@
 <body>
     <section>
         <h1 class="heading"> Anatomy Trivia</h1>
-        <div id="game-area"> <!-- the outer frame around the quiz-->
+        <div id="game-area">
+            <!-- the outer frame around the quiz-->
 
-             <div class="score-area"><!--score tracker-->
-            <p class="scores">Correct <span id="correct">0</span></p>
-            <p class="scores">Incorrect <span id="incorrect">0</span></p>
-        </div>
-             <!--questions area-->
+            <div class="score-area">
+                <!--score tracker-->
+                <p class="scores">Correct<span id="correct"> 0</span></p>
+                <p class="scores">Incorrect<span id="incorrect"> 0</span></p>
+            </div>
+            <!--questions area-->
             <div id="question-box">
-                <h2 id="question"></h2>
+                <h2 id="question"><strong>30+ Questions About The Gross, Coolest, And Craziest Facts About The Human Body</strong></h2>
             </div>
 
-            <div id="answer-box"> <!--answers/alternatives-->
+            <div id="answer-box">
+                <!--answers/alternatives-->
                 <button class="answer-button"></button>
                 <button class="answer-button"></button>
                 <button class="answer-button"></button>
                 <button class="answer-button"></button>
             </div>
 
-        
 
-            <div id="quiz-navigation"> <!--bottom navigation-->
-            <button type="reset" class="btn--green">Restart Quiz</button>
-            <button type="button" class="btn--blue">Next Question</button>
-    </div>
+
+            <div id="quiz-navigation">
+                <!--bottom navigation-->
+                <button type="button" class="btn--yellow">Start Game</button>
+                <button type="reset" class="btn--green">Restart Quiz</button>
+                <button type="button" class="btn--orange">Next Question</button>
+            </div>
         </div>
         <script src="assets/js/script.js"></script>
     </section>
