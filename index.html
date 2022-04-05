@@ -17,23 +17,23 @@
 <body>
     <section>
         <h1 class="heading"> Anatomy Trivia</h1>
-        <div id="game-area">
+        <div data-type="game-area" id="game-area">
             <!-- the outer frame around the quiz-->
 
             
             <!--score tracker-->
-            <div class="score-area">
-                 <p class="scores">Correct <span id="correct">0</span></p>
-                 <p class="scores">Incorrect <span id="incorrect">0</span></p>
-                 <p id="score">Score:</p>
+            <div data-type="score-area" class="score-area">
+                 <p data-type="scores" class="scores">Correct <span id="correct">0</span></p>
+                 <p data-type="scores" class="scores">Incorrect <span id="incorrect">0</span></p>
+                 <p data-type="score" id="score">Score:</p>
             </div>
         
         
-            <div id="question-box">
+            <div data-type="question-box" id="question-box">
                 <h2 data-type="question" id="question"><strong>30 Questions About The Coolest And Craziest Facts About The Human Body</strong></h2>
             </div>
 
-            <div id="answer-box">
+            <div data-type="answer-box" id="answer-box">
                 <!--answers/alternatives-->
                 <button data-type="answer-button" class="answer-button"></button>
                 <button data-type="answer-button" class="answer-button"></button>

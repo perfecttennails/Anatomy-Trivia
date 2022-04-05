@@ -36,7 +36,7 @@ h1 {
 }
 
 .score-area {
-    width: 100%;
+    width: 80%;
     font-size: 1.6rem;
     
     
@@ -121,8 +121,9 @@ h1 {
     margin: 20px;
 }
 
-.btn--green, .btn--orange, .btn--yellow:hover{
-    background-color: grey;
+.btn--green:hover, .btn--orange:hover, .btn--yellow:hover
+{
+    background-color: rgb(199, 117, 76);
 }
 
 @media screen and (min-width: 778px) {}
