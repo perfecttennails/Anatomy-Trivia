@@ -20,31 +20,35 @@
         <div id="game-area">
             <!-- the outer frame around the quiz-->
 
+            
+            <!--score tracker-->
             <div class="score-area">
-                <!--score tracker-->
-                <p class="scores">Correct<span id="correct"> 0</span></p>
-                <p class="scores">Incorrect<span id="incorrect"> 0</span></p>
+                 <p class="scores">Correct <span id="correct">0</span></p>
+                 <p class="scores">Incorrect <span id="incorrect">0</span></p>
+                 <p id="score">Score:</p>
             </div>
-            <!--questions area-->
+        
+        
             <div id="question-box">
-                <h2 id="question"><strong>30+ Questions About The Gross, Coolest, And Craziest Facts About The Human Body</strong></h2>
+                <h2 data-type="question" id="question"><strong>30 Questions About The Coolest And Craziest Facts About The Human Body</strong></h2>
             </div>
 
             <div id="answer-box">
                 <!--answers/alternatives-->
-                <button class="answer-button"></button>
-                <button class="answer-button"></button>
-                <button class="answer-button"></button>
-                <button class="answer-button"></button>
+                <button data-type="answer-button" class="answer-button"></button>
+                <button data-type="answer-button" class="answer-button"></button>
+                <button data-type="answer-button" class="answer-button"></button>
+                <button data-type="answer-button" class="answer-button"></button>
             </div>
 
 
 
             <div id="quiz-navigation">
                 <!--bottom navigation-->
-                <button type="button" class="btn--yellow">Start Game</button>
-                <button type="reset" class="btn--green">Restart Quiz</button>
-                <button type="button" class="btn--orange">Next Question</button>
+                <button data-type="btn--yellow" type="button" class="btn--yellow">Start Game</button>
+                <button data-type="btn--green" type="button" class="btn--green">Restart Quiz</button>
+                <button data-type="btn--orange" type="button" class="btn--orange">Next Question</button>
+                      
             </div>
         </div>
         <script src="assets/js/script.js"></script>
