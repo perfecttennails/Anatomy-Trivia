@@ -1,95 +1,131 @@
-//eventlistners for buttons
-document.addEventListener("answer-button", function () {
-    let buttons = document.getElementsByTagName("button");
-    for (let button of buttons) {
-        button.addEventListener("click", function () {
-            if (this.getAttribute("data-type") === "answer-buton") {
-
-
-                checkAnswer();
-                "btn--yellow".addEventListners('click', startGame);
-                "btn--green".addEventListners('click', restartQuiz);
-                "btn--orange".addEventListners('click', nextQuestion);
-                "answer-button".addEventListners('click', answerButton);
-                "question.box".addEventListners('click', questionBox);
-                "score".addEventListners('click', score);
-                "scores".addEventListners('click', scores);
-
-            }
-            let i;
-            for (i = 0; i < answerButton.length; i++){
-                answerButton[i].addEventListener("click", revealAnswer);
-            }
-            
-        
-                    
-
-            
-            function startQuiz() {
-                customQuestion =0;
-                startGame = document.getElementById("btn--yellow");
-                questionBox.innerHTML="question"[currentQuestion].question;
-                answerButton.innerHTML="answer-button"[currentQuestion].answer[0].option;
-                answerButton.onclick= ()=>{
-                    if(score<1) score++;
-                
-
-            }
-                let questionBox = document.getElementById("question-box");
-                customQuestion =0;
-                let answerBox = document.getElementById("question-box");
-                questionBox.innerHTML="question"[currentQuestion].question;
-                answerButton.innerHTML="answer-button"[currentQuestion].answer[0].option;
-                answerButton.onclick= ()=>{
-                    if(score<1) score++;
-                }
-
-                let answerButton = document.getElementsByClassName("answer-button");
-                customQuestion =0;
-                let startGame = document.getElementById("answer-button");
-                answerButton.innerHTML="question"[currentQuestion].question;
-                answerButton.innerHTML="answer-button"[currentQuestion].answer[0].option;
-                answerButton.onclick= ()=>{
-                    if(score<1) score++;
-                }
-
-                let nextQuestion = document.getElementById("btn--orange");
-                let restartQuiz = document.getElementById("btn--green");
-                let scoreTracker = document.getElementById("score");
-                let q = 0;
-                let a = 0;
-                let correct = 0;
-                let totalQuestions = 30;
-                let currentQuestion = 0;
-
-                scoreTracker.innerHTML = 'Score: ' + correct + '/' + totalQuestions;
-
-            }
-
-let currentQuestion =0;
-var score =0;
-            let question = [
-                {
-                    question: '#1 How much percentage of the human body is constituted by water?',
-                    answers: {
-                        A: '35%',
-                        B: '45%',
-                        C: '60%',
-                        D: '90%'
-                    },
-                    correctAnswer: '60%'
-                },
-
-                {
-                    question: '#2 Is the nose of an average human being as long as the length of their thumb?',
-                    answer: {
-                        A: 'Yes',
-                        B: 'No',
-                        C: 'Half the thumb',
-                        D: 'A thumb and a half'
-                    },
-                    correctAnswer: 'Yes'
-                }
-            ]
+var myQuestions = [
+    {
+        question: '#1 How much percentage of the human body is constituted by water?',
+        answers: {
+            A: '35%',
+            B: '45%',
+            C: '60%',
+            D: '90%'
         },
-    
+        correctAnswer: '60%'
+    },
+
+    {
+        question: '#2 Is the nose of an average human being as long as the length of their thumb?',
+        answer: {
+            A: 'Yes',
+            B: 'No',
+            C: 'Half the thumb',
+            D: 'A thumb and a half'
+        },
+        correctAnswer: 'Yes'
+    }
+];
+
+
+
+
+     //eventlistners for buttons
+var questionBox = document.getElementById("question");
+var resultsContainer = document.getElementById("scores");
+var submitButton = document.getElementById("answer-button");
+var startGame = document.getElementById('btn--yellow');
+var restartQuiz = document.getElementById('btn--green');
+var nextQuestion = document.getElementById('btn--orange');
+var scoreArea = document.getElementById('score, correct, incorrect');
+var q = 0;
+var a = 0;
+var correct = 0;
+var totalQuestions = 30;
+var currentQuestion = 0;
+
+scoreArea.innerHTML = 'Score: ' + correct + '/' + totalQuestions;
+
+function generateQuiz(startGame, questionBox, question, answerButton, scoreArea) {
+
+    function showQuestions(startGame, question, questionBox) {
+        var output = [];
+        var answers;
+    }
+    // for each question...
+    for (var i = 0; i < questions.length; i++) {
+
+        // first reset the list of answers
+        answers = [];
+
+        // for each available answer to this question...
+        for (letter in questions[i].answers) {
+
+            // ...add an html radio button
+            answers.push(
+                <button class="answer-button"></button>);
+        };
+
+        // add this question and its answers to the output
+        
+        // Displays all questions/alternatives:
+        question.innerHTML = questions[q].question;
+        answerButton[0].innerHTML = questions[a].answers.A;
+        answerButton[1].innerHTML = questions[a].answers.B;
+        answerButton[2].innerHTML = questions[a].answers.C;
+        answerButton[3].innerHTML = questions[a].answers.D;
+        
+        nextQuiz.addEventListener('click', nextQuestion);
+        
+    }
+
+    // finally combine our output list into one string of html and put it on the page
+    gameArea.innerHTML = output.join('');
+}
+function showResults(question, gameArea, scoreArea, answerButton) {
+    // code will go here
+}
+
+// show the questions
+showQuestions(startGame, question, gameArea);
+
+// when user clicks submit, show results
+answerButton.onclick = function () {
+    showResults(question, gameArea, scoreArea);
+}
+
+// finally combine our output list into one string of html and put it on the page
+gameArea.innerHTML = output.join('btn--yellow');
+
+function showResults(question, questionBox, scoreArea) {
+
+    // gather answer containers from our quiz
+    var answerContainers = quizContainer.querySelectorAll('.answers');
+
+    // keep track of user's answers
+    var userAnswer = '';
+    var numCorrect = 0;
+
+    // for each question...
+    for (var i = 0; i < questions.length; i++) {
+
+        // find selected answer
+        userAnswer = (answerContainers[i].querySelector('input[name=question' + i + ']:checked') || {}).value;
+
+        // if answer is correct
+        if (userAnswer === questions[i].correctAnswer) {
+            // add to the number of correct answers
+            numCorrect++;
+
+            // color the answers green
+            gameArea[i].style.color = 'lightgreen';
+        }
+        // if answer is wrong or blank
+        else {
+            // color the answers red
+            gameArea[i].style.color = 'red';
+        }
+    }
+
+    // show number of correct answers out of total
+    scoreArea.innerHTML = numCorrect + ' out of ' + questions.length;
+}
+// on submit, show results
+submitButton.onclick = function () {
+    showResults(question, questionBox, scoreArea);
+}
