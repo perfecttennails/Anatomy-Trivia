@@ -23,16 +23,14 @@ var myQuestions = [
 ];
 
 
-
-
-     //eventlistners for buttons
+     
 var questionBox = document.getElementById("question");
-var resultsContainer = document.getElementById("scores");
-var submitButton = document.getElementById("answer-button");
-var startGame = document.getElementById("btn--yellow");
-var restartQuiz = document.getElementById("btn--green");
-var nextQuestion = document.getElementById("btn--orange");
-var score = document.getElementByClass("score");
+var scoreArea = document.getElementById("scores");
+var answerBox = document.getElementByClass("answer-button");
+var quizNavigation = document.getElementById("btn-start");
+var quizNavigation = document.getElementById("btn-restart");
+var quizNavigation= document.getElementById("btn-next");
+var totalScore = document.getElementById("total-score");
 var scores = document.getElementByClass("correct, incorrect");
 var q = 0;
 var a = 0;
@@ -40,62 +38,77 @@ var correct = 0;
 var totalQuestions = 30;
 var currentQuestion = 0;
 
-score.innerHTML = "Score:" + correct + "/" + totalQuestions;
+totalScore.innerHTML = 'Score:' + correct + '/' + totalQuestions;
 
-function generateQuiz(startGame, questionBox, question, answerButton, score) {
 
-    function showQuestions(startGame, question, questionBox) {
+//eventlistners for buttons
+restart.addEventListener("click", restart);
+start.addEventListener("click", startGame);
+next.addEventListener("click", next);
+answerButton.addEventListener("click", submit);
+
+function generateQuiz(questionBox, answerBox, quizNavigation, scoreArea) {
+
+}
+
+    function showQuestions(startGame, question, answerButton){
+        
+    }
         var output = [];
         var answers;
-    }
+     
     // for each question...
-    for (var i = 0; i < questions.length; i++) {
+    for (var i = 0; i < question.length; i++) {
+    }
 
         // first reset the list of answers
         answers = [];
 
         // for each available answer to this question...
-        for (letter in questions[i].answers) {
+        for (letter in question[i].answers) {
 
-            // ...add an html radio button
-            answers.push(
-                <button class="answer-button"></button>);
-        };'<label>'
-        + '<input type="button" name="question'+i+'" value="'+letter+'">'
-        + letter + ': '
-        + questions[i].answers[letter]
-      + '</label>'
-    );
-  }
-
-        // add this question and its answers to the output
-        output.push(
-			'<div class="question">' + questions[i].question + '</div>'
-			+ '<div class="answer-button">' + answers.join('') + '</div>'
-		);
-	}
-
-        let i;
-for (i = 0; i < answerButton.length; i++){
-    answerButton[i].addEventListener("click", revealAnswer);
-}
-        // Displays all questions/alternatives:
-        question.innerHTML = questions[q].question;
-        answerButton[0].innerHTML = questions[a].answers.A;
-        answerButton[1].innerHTML = questions[a].answers.B;
-        answerButton[2].innerHTML = questions[a].answers.C;
-        answerButton[3].innerHTML = questions[a].answers.D;
         
-        nextQuiz.addEventListener('click', nextQuestion);
-        
-    }
+    
 
     // finally combine our output list into one string of html and put it on the page
     startGame.innerHTML = output.join('');
+
+    
+function showQuestions (question, gameArea, scoreArea, answerButton){
+
 }
-function showResults(question, gameArea, scoreArea, answerButton) {
-    // code will go here
+    // gather answer containers from our quiz
+	var answerContainers = quizContainer.querySelectorAll('.answers');
+	
+	// keep track of user's answers
+	var userAnswer = '';
+	var numCorrect = 0;
+	
+	// for each question...
+	for(var i=0; i<questions.length; i++){
+
+		// find selected answer
+		userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
+		
+		// if answer is correct
+		if(userAnswer===questions[i].correctAnswer){
+			// add to the number of correct answers
+			numCorrect++;
+			
+			// color the answers green
+			answerContainers[i].style.color = 'lightgreen';
+		}
+		// if answer is wrong or blank
+		else{
+			// color the answers red
+			answerContainers[i].style.color = 'red';
+		}
+	}
+
+	// show number of correct answers out of total
+	scores.innerHTML = numCorrect + ' out of ' + questions.length;
 }
+
 
 // show the questions
 showQuestions(startGame, question, questionBox);

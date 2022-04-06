@@ -25,11 +25,11 @@ h1 {
     opacity: 0.8;
 }
 
-#score {
+#total-score {
    float: right;
 }
 
-.scores, #score {
+.scores, #total-score {
     display: inline-block; 
     margin: 8px 25px;
     
@@ -92,36 +92,27 @@ h1 {
     margin-right: 2%;
     margin-top: 7%;
 }
-
-
-.btn--green {
+.btn {
     border: 10px;
-    background-color: rgb(91, 180, 91);
     border-radius: 50%;
     height: 50px;
     font-weight: bold;
     margin: 20px;
 }
 
-.btn--orange {
-    border: 10px;
+.btn-restart{
+     background-color: rgb(91, 180, 91); 
+}
+
+.btn-next {
     background-color: rgb(225, 178, 107);
-    border-radius: 50%;
-    height: 50px;
-    font-weight: bold;
-    margin: 20px;
 }
 
-.btn--yellow {
-    border: 10px;
+.btn-start {
     background-color: rgb(233, 233, 145);
-    border-radius: 50%;
-    height: 50px;
-    font-weight: bold;
-    margin: 20px;
 }
 
-.btn--green:hover, .btn--orange:hover, .btn--yellow:hover
+.btn:hover
 {
     background-color: rgb(199, 117, 76);
 }
