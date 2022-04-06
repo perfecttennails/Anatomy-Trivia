@@ -5,7 +5,7 @@
 This puzzle is for all ages.
  30 Questions About The Coolest And Craziest Facts About The Human Body.
 
- ![Media]
+ ![Media](assets/images/Anatomy-Trivia.png)
 
  ## Navigation
 
