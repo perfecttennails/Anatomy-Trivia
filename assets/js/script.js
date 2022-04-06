@@ -29,19 +29,20 @@ var myQuestions = [
 var questionBox = document.getElementById("question");
 var resultsContainer = document.getElementById("scores");
 var submitButton = document.getElementById("answer-button");
-var startGame = document.getElementById('btn--yellow');
-var restartQuiz = document.getElementById('btn--green');
-var nextQuestion = document.getElementById('btn--orange');
-var scoreArea = document.getElementById('score, correct, incorrect');
+var startGame = document.getElementById("btn--yellow");
+var restartQuiz = document.getElementById("btn--green");
+var nextQuestion = document.getElementById("btn--orange");
+var score = document.getElementByClass("score");
+var scores = document.getElementByClass("correct, incorrect");
 var q = 0;
 var a = 0;
 var correct = 0;
 var totalQuestions = 30;
 var currentQuestion = 0;
 
-scoreArea.innerHTML = 'Score: ' + correct + '/' + totalQuestions;
+score.innerHTML = "Score:" + correct + "/" + totalQuestions;
 
-function generateQuiz(startGame, questionBox, question, answerButton, scoreArea) {
+function generateQuiz(startGame, questionBox, question, answerButton, score) {
 
     function showQuestions(startGame, question, questionBox) {
         var output = [];
@@ -59,10 +60,25 @@ function generateQuiz(startGame, questionBox, question, answerButton, scoreArea)
             // ...add an html radio button
             answers.push(
                 <button class="answer-button"></button>);
-        };
+        };'<label>'
+        + '<input type="button" name="question'+i+'" value="'+letter+'">'
+        + letter + ': '
+        + questions[i].answers[letter]
+      + '</label>'
+    );
+  }
 
         // add this question and its answers to the output
-        
+        output.push(
+			'<div class="question">' + questions[i].question + '</div>'
+			+ '<div class="answer-button">' + answers.join('') + '</div>'
+		);
+	}
+
+        let i;
+for (i = 0; i < answerButton.length; i++){
+    answerButton[i].addEventListener("click", revealAnswer);
+}
         // Displays all questions/alternatives:
         question.innerHTML = questions[q].question;
         answerButton[0].innerHTML = questions[a].answers.A;
@@ -75,14 +91,14 @@ function generateQuiz(startGame, questionBox, question, answerButton, scoreArea)
     }
 
     // finally combine our output list into one string of html and put it on the page
-    gameArea.innerHTML = output.join('');
+    startGame.innerHTML = output.join('');
 }
 function showResults(question, gameArea, scoreArea, answerButton) {
     // code will go here
 }
 
 // show the questions
-showQuestions(startGame, question, gameArea);
+showQuestions(startGame, question, questionBox);
 
 // when user clicks submit, show results
 answerButton.onclick = function () {
@@ -92,10 +108,10 @@ answerButton.onclick = function () {
 // finally combine our output list into one string of html and put it on the page
 gameArea.innerHTML = output.join('btn--yellow');
 
-function showResults(question, questionBox, scoreArea) {
+function showResults(answerButton, scoreArea) {
 
     // gather answer containers from our quiz
-    var answerContainers = quizContainer.querySelectorAll('.answers');
+    var answerContainers = answerButton.querySelectorAll('.answers');
 
     // keep track of user's answers
     var userAnswer = '';
@@ -123,9 +139,14 @@ function showResults(question, questionBox, scoreArea) {
     }
 
     // show number of correct answers out of total
-    scoreArea.innerHTML = numCorrect + ' out of ' + questions.length;
+    score.innerHTML = numCorrect + ' out of ' + questions.length;
 }
 // on submit, show results
 submitButton.onclick = function () {
-    showResults(question, questionBox, scoreArea);
+    showResults(answerButton, questionBox, scoreArea);
+}
+
+restartQuiz.addEventListener('click', restartQuiz);
+function restartQuiz(){
+    location.reload();
 }
