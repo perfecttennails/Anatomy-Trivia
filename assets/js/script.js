@@ -1,3 +1,4 @@
+
 var myQuestions = [
     {
         question: '#1 How much percentage of the human body is constituted by water?',
@@ -23,143 +24,92 @@ var myQuestions = [
 ];
 
 
-     
-var questionBox = document.getElementById("question");
-var scoreArea = document.getElementById("scores");
-var answerBox = document.getElementByClass("answer-button");
-var quizNavigation = document.getElementById("btn-start");
-var quizNavigation = document.getElementById("btn-restart");
-var quizNavigation= document.getElementById("btn-next");
-var totalScore = document.getElementById("total-score");
-var scores = document.getElementByClass("correct, incorrect");
+    
+ // Gets all the elements needed and stores them in variables:
+var questionBox = document.getElementById('question-box');
+var question = document.getElementById('question');
+var answerButton = document.getElementsByClassName('answer-button');
+var nextQuestion = document.getElementById('btn-next');
+var restartQuiz = document.getElementById('btn-restart');
+var score = document.getElementById('score');
 var q = 0;
 var a = 0;
 var correct = 0;
-var totalQuestions = 30;
+var totalQuestions = 8;
 var currentQuestion = 0;
 
-totalScore.innerHTML = 'Score:' + correct + '/' + totalQuestions;
+scoreTracker.innerHTML = 'Score: ' + correct + '/' + totalQuestions;
 
-
-//eventlistners for buttons
-restart.addEventListener("click", restart);
-start.addEventListener("click", startGame);
-next.addEventListener("click", next);
-answerButton.addEventListener("click", submit);
-
-function generateQuiz(questionBox, answerBox, quizNavigation, scoreArea) {
-
-}
-
-    function showQuestions(startGame, question, answerButton){
-        
-    }
-        var output = [];
-        var answers;
-     
-    // for each question...
-    for (var i = 0; i < question.length; i++) {
-    }
-
-        // first reset the list of answers
-        answers = [];
-
-        // for each available answer to this question...
-        for (letter in question[i].answers) {
-
-        
-    
-
-    // finally combine our output list into one string of html and put it on the page
-    startGame.innerHTML = output.join('');
-
-    
-function showQuestions (question, gameArea, scoreArea, answerButton){
-
-}
-    // gather answer containers from our quiz
-	var answerContainers = quizContainer.querySelectorAll('.answers');
-	
-	// keep track of user's answers
-	var userAnswer = '';
-	var numCorrect = 0;
-	
-	// for each question...
-	for(var i=0; i<questions.length; i++){
-
-		// find selected answer
-		userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
-		
-		// if answer is correct
-		if(userAnswer===questions[i].correctAnswer){
-			// add to the number of correct answers
-			numCorrect++;
-			
-			// color the answers green
-			answerContainers[i].style.color = 'lightgreen';
-		}
-		// if answer is wrong or blank
-		else{
-			// color the answers red
-			answerContainers[i].style.color = 'red';
-		}
-	}
-
-	// show number of correct answers out of total
-	scores.innerHTML = numCorrect + ' out of ' + questions.length;
-}
-
-
-// show the questions
-showQuestions(startGame, question, questionBox);
-
-// when user clicks submit, show results
-answerButton.onclick = function () {
-    showResults(question, gameArea, scoreArea);
-}
-
-// finally combine our output list into one string of html and put it on the page
-gameArea.innerHTML = output.join('btn--yellow');
-
-function showResults(answerButton, scoreArea) {
-
-    // gather answer containers from our quiz
-    var answerContainers = answerButton.querySelectorAll('.answers');
-
-    // keep track of user's answers
-    var userAnswer = '';
-    var numCorrect = 0;
-
-    // for each question...
-    for (var i = 0; i < questions.length; i++) {
-
-        // find selected answer
-        userAnswer = (answerContainers[i].querySelector('input[name=question' + i + ']:checked') || {}).value;
-
-        // if answer is correct
-        if (userAnswer === questions[i].correctAnswer) {
-            // add to the number of correct answers
-            numCorrect++;
-
-            // color the answers green
-            gameArea[i].style.color = 'lightgreen';
+/* 
+Displays a message based on user input. 
+A correct answer will trigger a green background and a "correct" message.
+An incorrect answer will trigger a red background, an "incorrect" message, as well as the correct answer.
+*/
+function revealAnswer(event) {
+        if (this.innerHTML === question[q].correctAnswer && currentQuestion == (totalQuestions - 1)){
+            correct++;
+            currentQuestion++;
+            questionBox.style.backgroundColor = "chartreuse";
+            question.innerHTML = 'Correct!' + '</br>' + 'Your total score: ' + correct + '/' + totalQuestions;
+        } 
+        else if (this.innerHTML != question[q].correctAnswer && currentQuestion == (totalQuestions - 1)){
+            currentQuestion++;
+            questionBox.style.backgroundColor = "red";
+            question.innerHTML = 'Incorrect!' + '</br>' + 'The correct answer was: ' + '<strong>' + question[q].correctAnswer + '</strong>' + '</br>' + 'Your total score: ' + correct + '/' + totalQuestions;
+            } 
+        else if (this.innerHTML === question[q].correctAnswer && currentQuestion == q){
+            questionBox.style.backgroundColor = "chartreuse";
+            question.innerHTML = 'Correct!';
+            correct++;
+            currentQuestion++;
+        } 
+        else if (this.innerHTML != question[q].correctAnswer && currentQuestion == q){
+            questionBox.style.backgroundColor = "red";
+            question.innerHTML = 'Incorrect!' + '</br>' + 'The correct answer was: ' + '<strong>' + question[q].correctAnswer + '</strong>';
+            currentQuestion++;
         }
-        // if answer is wrong or blank
-        else {
-            // color the answers red
-            gameArea[i].style.color = 'red';
-        }
+        
+        totalScore.innerHTML = 'Score: ' + correct + '/' + totalQuestions; // Displays a value based on correctly answered questions and the total amount of questions.
+}
+let i;
+for (i = 0; i < answerButton.length; i++){
+    answerButton[i].addEventListener("click", revealAnswer);
+}
+
+// Displays all questions/alternatives:
+question.innerHTML = question[q].question;
+answerButton[0].innerHTML = question[a].answer.A;
+answerButton[1].innerHTML = question[a].answer.B;
+answerButton[2].innerHTML = question[a].answer.C;
+answerButton[3].innerHTML = question[a].answer.D;
+
+btnNext.addEventListener('click', nextQuestion);
+
+/* 
+Takes the user to the next question if the current question has been answered.
+If not, or if the quiz is over, an alert will be triggered accordingly.
+*/
+function nextQuestion(){
+    if (currentQuestion == totalQuestions){
+        alert('Click the restart button to try again');
     }
-
-    // show number of correct answers out of total
-    score.innerHTML = numCorrect + ' out of ' + questions.length;
+    else if (currentQuestion > q){
+        q++;
+        a++;
+        question.innerHTML = question[q].question;
+        answerButton[0].innerHTML = question[a].answer.A;
+        answerButton[1].innerHTML = question[a].answer.B;
+        answerButton[2].innerHTML = question[a].answer.C;
+        answerButton[3].innerHTML = question[a].answer.D;
+        questionBox.style.backgroundColor = 'white';
+    }
+    else {
+        alert('Please select your answer to continue');
+    }
 }
-// on submit, show results
-submitButton.onclick = function () {
-    showResults(answerButton, questionBox, scoreArea);
-}
 
-restartQuiz.addEventListener('click', restartQuiz);
+// Reloads/resets the entire quiz when button is clicked:
+btnRestart.addEventListener('click', restartQuiz);
 function restartQuiz(){
     location.reload();
 }

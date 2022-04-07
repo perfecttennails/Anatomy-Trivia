@@ -8,6 +8,7 @@ body {
     padding: 0%;
 }
 
+
 h1 {
     font-family: Montserrat, Work Sans, sans-serif;
     text-align: center;
@@ -92,6 +93,7 @@ h1 {
     margin-right: 2%;
     margin-top: 7%;
 }
+
 .btn {
     border: 10px;
     border-radius: 50%;
@@ -100,8 +102,26 @@ h1 {
     margin: 20px;
 }
 
+form button {
+    background-color:rgb(199, 117, 76);
+    border: 50px;
+    border-radius: 9px;
+    height: 100px;
+    width: 200px;
+    font-weight: bold;
+    margin: 30px;
+    font-size: 25px;
+}
+
+form button:hover {
+        background-color: rgb(199, 117, 76);
+        cursor: pointer;
+        box-shadow: 0.04rem 0.6rem;
+    }
+
+
 .btn-restart{
-     background-color: rgb(91, 180, 91); 
+     background-color: rgb(233, 233, 145); 
 }
 
 .btn-next {
@@ -109,12 +129,65 @@ h1 {
 }
 
 .btn-start {
-    background-color: rgb(233, 233, 145);
+    background-color: rgb(91, 180, 91);
 }
 
-.btn:hover
-{
+.btn:hover{
     background-color: rgb(199, 117, 76);
+    cursor: pointer;
+    box-shadow: 0.04rem 0.2rem;
 }
 
-@media screen and (min-width: 778px) {}
+@media screen and (max-width: 668px) {
+    #total-score {
+        float: right;
+     }
+   
+    .scores, #total-score {
+        display: inline-block; 
+        margin: 14px 20px;
+        
+    }
+    
+    .score-area {
+        width: 90%;
+        font-size: 1rem;
+        
+        
+    }
+    
+    #question-box {
+        height: 150px;
+        width: 80%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+    }
+
+
+    #question {
+        font-family: Montserrat, Work Sans, sans-serif;
+        font-weight: 300;
+        font-size: 100%;
+    }
+
+    #quiz-navigation {
+        font-family: Montserrat, Work Sans, sans-serif;
+        text-align: center;
+        margin-right: 2%;
+        margin-top: 17%;
+    }
+
+    .btn {
+        border: 5px;
+        border-radius: 50%;
+        height: 50px;
+        font-weight: bold;
+        margin: 10px;
+    }   
+
+
+    
+}

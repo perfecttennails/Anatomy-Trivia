@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="AngelaSandholm">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -15,44 +16,19 @@
 </head>
 
 <body>
-    <section>
+    <section> <!--front page content with start button-->
         <h1 class="heading"> Anatomy Trivia</h1>
-        <div id="game-area">
-            <!-- the outer frame around the quiz-->
-
-            
-            <!--score tracker-->
-            <div class="score-area">
-                 <p class="scores">Correct <span id="correct">0</span></p>
-                 <p class="scores">Incorrect <span id="incorrect">0</span></p>
-                 <p  id="total-score">Score:</p>
-            </div>
         
+
         
-            <div id="question-box">
-                <h2 id="question"><strong>30 Questions About The Coolest And Craziest Facts About The Human Body</strong></h2>
+            <div id="game-area">
+                <div id="question-box">
+                    <h2 id="question"><strong>30 Questions About The Coolest And Craziest Facts About The Human Body</strong></h2>
+                </div>
+                <div id="answer-box">
+                    <form method="get" action="/game.html">
+                        <button >Start Quiz</button>
+                    </form>
+                </div>
             </div>
-
-            <div id="answer-box">
-                <!--answers/alternatives-->
-                <button class="answer-button"></button>
-                <button class="answer-button"></button>
-                <button class="answer-button"></button>
-                <button class="answer-button"></button>
-            </div>
-
-
-
-            <div id="quiz-navigation">
-                <!--bottom navigation-->
-                <button  type="button" class="btn btn-start">Start Game</button>
-                <button  type="button" class="btn btn-restart">Restart Quiz</button>
-                <button  type="button" class="btn btn-next">Next Question</button>
-                      
-            </div>
-        </div>
-        <script src="assets/js/script.js"></script>
-    </section>
-</body>
-
-</html>
+        </section>
