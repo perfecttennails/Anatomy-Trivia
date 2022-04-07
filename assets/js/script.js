@@ -1,5 +1,24 @@
 
-var myQuestions = [
+ // Gets all the elements needed and stores them:
+
+const question = document.querySelector('#question');
+const choices = Array.from(document.querySelectorAll('.choice-text'));
+const answerButton =  Array.from(document.querySelectorAll('.answer-button'));
+const nextQuestion = document.querySelector('.btn-next');
+const restartQuiz = document.querySelector('.btn-restart');
+const score = document.querySelector('#correct #incorrect');
+const totalcores = document.querySelector('#total-score');
+
+var q = 0;
+var a = 0;
+let correct = 0
+let totalScores = 0
+let currentQuestions = {}
+let availableQuestions =[]
+
+scoreTracker.innerHTML = 'Score: ' + correct + '/' + totalQuestions;
+
+let questions = [
     {
         question: '#1 How much percentage of the human body is constituted by water?',
         answers: {
@@ -25,20 +44,7 @@ var myQuestions = [
 
 
     
- // Gets all the elements needed and stores them in variables:
-var questionBox = document.getElementById('question-box');
-var question = document.getElementById('question');
-var answerButton = document.getElementsByClassName('answer-button');
-var nextQuestion = document.getElementById('btn-next');
-var restartQuiz = document.getElementById('btn-restart');
-var score = document.getElementById('score');
-var q = 0;
-var a = 0;
-var correct = 0;
-var totalQuestions = 8;
-var currentQuestion = 0;
 
-scoreTracker.innerHTML = 'Score: ' + correct + '/' + totalQuestions;
 
 /* 
 Displays a message based on user input. 
