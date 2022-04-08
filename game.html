@@ -24,33 +24,29 @@
             <!--score tracker-->
        
             <div class="score-area">
-                 <p class="scores">Correct <span id="correct">0</span></p>
-                 <p class="scores">Incorrect <span id="incorrect">0</span></p>
-                 <p  id="total-score">Score:<span id="score">0/2</span></p>
+                <p class="scores">Correct <span id="correct">0</span></p>
+                <p class="scores">Incorrect<span id="incorrect">0</span></p>
+                <p class="total-score">Score:</p>
             </div>
         
         
             <div id="question-box">
-                <h2 id="question"><strong>what is the answer to this question?</strong></h2>
+                <h2 id="question"><strong></strong></h2>
             </div>
 
             <div id="answer-box">
                 <!--answers/alternatives-->
                 <button class="answer-button">
-                    <p class="answer-prefix">A</p>
-                    <p class="answer-text" dat-number="1">Choice1... this is a test question Choice1...</p>
+                    <p class="answer-prefix" dat-number="A"></p>
                 </button>
                 <button type="button" class="answer-button">
-                    <p class="answer-prefix">B</p>
-                    <p class="answer-text" dat-number="2">Choice2</p>
+                    <p class="answer-prefix" dat-number="B"></p>
                 </button>
                 <button type="button" class="answer-button">
-                    <p class="answer-prefix">C</p>
-                    <p class="answer-text" dat-number="3">Choice3</p>
+                    <p class="answer-prefix" dat-number="C"></p>
                 </button>
                 <button type="button" class="answer-button">
-                    <p class="answer-prefix">D</p>
-                    <p class="answer-text" dat-number="4">Choice4</p>
+                    <p class="answer-prefix" dat-number="D"></p>
                 </button>
             </div>
 
@@ -58,7 +54,6 @@
 
             <div id="quiz-navigation">
                 <!--bottom navigation-->
-                <button type="button" class="btn btn-start" >Start Game</button>
                 <button type="button" class="btn btn-next">Next Question</button>
                 <button type="button" class="btn btn-restart">Restart Quiz</button>      
             </div>
