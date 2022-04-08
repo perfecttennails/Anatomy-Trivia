@@ -11,24 +11,57 @@
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
 
-    <title>Anatomy Trivia</title>
+    <title>Quiz Page</title>
 
 </head>
 
 <body>
-    <section> <!--front page content with start button-->
+    <section>
         <h1 class="heading"> Anatomy Trivia</h1>
         
-
+        <div id="game-area"><!-- the outer frame around the quiz-->
+            
+            <!--score tracker-->
+       
+            <div class="score-area">
+                <p class="scores">Correct <span id="correct">0</span></p>
+                <p class="scores">Incorrect<span id="incorrect">0</span></p>
+                <p class="total-score">Score:</p>
+            </div>
         
-        <div id="game-area">
+        
             <div id="question-box">
-                <h2 id="game-description"><strong>30 Questions About The Coolest And Craziest Facts About The Human Body</strong></h2>
+                <h2 id="question"><strong>30 Questions About The Coolest And Craziest Facts About The Human Body</strong></h2>
             </div>
-            <div id="start-box">
-                <form method="get" action="/game.html">
-                    <button >Start Quiz</button>
-                </form>
+
+            <div id="answer-box">
+                <!--answers/alternatives-->
+                <button class="answer-button">
+                    <p class="answer-prefix" dat-number="A">Choice A</p>
+                </button>
+                <button type="button" class="answer-button">
+                    <p class="answer-prefix" dat-number="B">Choice B</p>
+                </button>
+                <button type="button" class="answer-button">
+                    <p class="answer-prefix" dat-number="C">Choice C</p>
+                </button>
+                <button type="button" class="answer-button">
+                    <p class="answer-prefix" dat-number="D">Choice D</p>
+                </button>
             </div>
+
+
+
+            <div id="quiz-navigation">
+                <!--bottom navigation-->
+                <button onclick="functionname(startGame)" class="btn btn-start">Start Game</button>  
+                <button onclick="functionname()" class="btn btn-next">Next Question</button>
+                <button onclick="functionname()" class="btn btn-restart">Restart Quiz</button>    
+                 
             </div>
-        </section>
+        </div>
+        <script src="assets/js/script.js"></script>
+    </section>
+</body>
+
+</html>

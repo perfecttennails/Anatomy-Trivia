@@ -1,8 +1,3 @@
-
-
- // Gets all the elements needed and stores them
- 
- 
 let questions = [
     { 
         question: '#1 How much percentage of the human body is constituted by water?',
@@ -23,7 +18,12 @@ let questions = [
     },
 ]
 
+// Gets all the elements needed and stores them
+
+let startGame = document.querySelector(".btn-start");
+startGame.addEventListener("click", functionname('startGame'),
+     let (startGame)                     
+)
 
 
-
-
+    
