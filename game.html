@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="AngelaSandholm">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
+
+    <title>Quiz Page</title>
+
+</head>
+
+<body>
+    <section>
+        <h1 class="heading"> Anatomy Trivia</h1>
+        
+        <div id="game-area"><!-- the outer frame around the quiz-->
+            
+            <!--score tracker-->
+       
+            <div class="score-area">
+                <p class="scores">Correct <span id="correct">0</span></p>
+                <p class="scores">Incorrect<span id="incorrect">0</span></p>
+                <p class="total-score">Score:</p>
+            </div>
+        
+        
+            <div class="question-box" id="question">
+                question goes here
+            </div>
+
+            <div id="answer-box">
+                <!--answers/alternatives-->
+                <button class="answer-button" onclick="" id="A" >option1</button>
+                <button class="answer-button" onclick="" id="B" >option2</button>
+                <button class="answer-button" onclick="" id="C" >option3</button>
+                <button class="answer-button" onclick="" id="D" >option4</button>
+            </div>
+
+
+
+            <div id="quiz-navigation">
+                <!--bottom navigation-->
+                 
+                <button class="btn btn-next">Next Question</button>
+                <button class="btn btn-restart">Restart Quiz</button>    
+                 
+            </div>
+        </div>
+        <script src="assets/js/script.js"></script>
+    </section>
+</body>
+
+</html>
