@@ -8,24 +8,10 @@ body {
     padding: 0%;
 }
 
-.answer-prefix {
+.choice {
     font-family: Montserrat, Work Sans, sans-serif;
-    padding: 0px;
-    height: 45%;
-    width:70%;
     font-weight: bold;
-    margin: 5px;
-
 }
-
-.answer-text {
-    font-family: Montserrat, Work Sans, sans-serif;
-    padding: 0px;
-    width: 80%;
-    font-weight: bold;  
-    margin-bottom: 20%;
-}
-
 
 h1 {
     font-family: Montserrat, Work Sans, sans-serif;
@@ -83,6 +69,7 @@ h2 {
     font-family: Montserrat, Work Sans, sans-serif;
     font-weight: 300;
     font-size: 175%;
+
 }
 
 #question {
