@@ -72,74 +72,75 @@ var selected = "";
 
 // Show selection for op1
 A.addEventListener("click", () => {
-    A.style.backgroundColor = "orange";
-    B.style.backgroundColor = "lightskyblue";
-    C.style.backgroundColor = "lightskyblue";
-    D.style.backgroundColor = "lightskyblue";
+    A.style.backgroundColor = "white";
+    B.style.backgroundColor = "white";
+    C.style.backgroundColor = "white";
+    D.style.backgroundColor = "white";
     selected = A.value;
 })
 
 // Show selection for op2
 B.addEventListener("click", () => {
-    A.style.backgroundColor = "lightskyblue";
-    B.style.backgroundColor = "orange";
-    C.style.backgroundColor = "lightskyblue";
-    D.style.backgroundColor = "lightskyblue";
+    A.style.backgroundColor = "white";
+    B.style.backgroundColor = "white";
+    C.style.backgroundColor = "white";
+    D.style.backgroundColor = "white";
     selected = B.value;
 })
 
 // Show selection for op3
 C.addEventListener("click", () => {
-    A.style.backgroundColor = "lightskyblue";
-    B.style.backgroundColor = "lightskyblue";
-    C.style.backgroundColor = "orange";
-    D.style.backgroundColor = "lightskyblue";
+    A.style.backgroundColor = "white";
+    B.style.backgroundColor = "white";
+    C.style.backgroundColor = "white";
+    D.style.backgroundColor = "white";
     selected = C.value;
 })
 
 // Show selection for op4
 D.addEventListener("click", () => {
-    A.style.backgroundColor = "lightskyblue";
-    B.style.backgroundColor = "lightskyblue";
-    C.style.backgroundColor = "lightskyblue";
-    D.style.backgroundColor = "orange";
+    A.style.backgroundColor = "white";
+    B.style.backgroundColor = "white";
+    C.style.backgroundColor = "white";
+    D.style.backgroundColor = "white";
     selected = D.value;
 })
 
-// Grabbing the answer
-const answerButton = document.getElementsById("true");
-
-// Evaluate method
-answerButton[0].addEventListener("click", () => {
+/// Grabbing the answer by button
+x// Evaluate method
+const isCorrect = [0].addEventListener("click", () => {
     if (selected == "true") {
-        answerButton[0].innerHTML = "true";
-        answerButton[0].style.color = "green";
+        isCorrect[0].innerText = "true";
+        isCorrect[0].style.color = "green";
     } else {
-        answerButton[0].innerHTML = "false";
-        answerButton[0].style.color = "red";
+        isCorrect[0].innerText = "false";
+        isCorrect[0].style.color = "red";
     }
 })
+
 }
 
 if (start) {
 iterate("0");
 }
 
-let scoreArea = document.getElementById('score');
-let q = 0;
-let a = 0;
-let correct = 0;
-let totalQuestions = 3;
-let currentQuestion = 0;
+const scoreArea = document.getElementById('scores');
+const q = 0;
+const a = 0;
+const correct = 0;
+const totalScore = 3;
+const currentQuestion = 0;
 
-scoreArea.innerHTML = 'Score: ' + correct + '/' + totalQuestions;
+totalScore.innerHTML= 'Score:' + correct + '/' + totalScore;
 
 // Next button and method
-const nextQuestion = document.getElementsByClassName('btn btn-next')[0];
+
+const restartQuiz = document.getElementByClass('restart-quiz');
+const nextQuestion = document.getElementsByClassName('next-question')[0];
 var id = 0;
 
 nextQuestion.addEventListener("click", () => {
-start = false;
+start = true;
 if (id < 2) {
     id++;
     iterate(id);
