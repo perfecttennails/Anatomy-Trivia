@@ -10,25 +10,22 @@ This puzzle is for all ages.
  ## Navigation
 
 
-      ### There are 3 main navigation buttons:
+      ### There are 4 navigation buttons:
     - Start to begin the game 
-    - Restart Game to start over
-    - Next Question to hop over a qustion
+    -Submit Answer to check the result of the question
+    - Restart Game to start over from the begining
+    - Next Question to hop over a question
 
-        1. As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about the organisation.
-        2. As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
-        3. As a First Time Visitor, I want to look for testimonials to understand what their users think of them and see if they are trusted. I also want to locate their social media links to see their followings on social media to determine how trusted and known they are.
 
-## Fonts and icons
+## Fonts 
 - fonts from google font
-- icons from font awsome
-
- ## Credits
+Montserrat, Work Sans, sans-serif
+ 
 
 ### Content
 - The question array was taken from [Kidadl](https://kidadl.com/articles/anatomy-trivia-questions-about-the-gross-coolest-and-craziest-facts-about-the-human-body)
 
-- The code for the function to reveal the correct answer was modified from Code Institute's "JavaScript Essentials" course.
+- The code for the function to reveal the correct answer was modified from https://www.geeksforgeeks.org/
 
 ### Media
 - The background image was taken from [Pixa Bay](https://pixabay.com/)
