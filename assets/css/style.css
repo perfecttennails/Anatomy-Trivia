@@ -39,7 +39,7 @@ h2 {
    float: right;
 }
 
-.scores, .total-score{
+.scores, .result, .total-score{
     display: inline-block; 
     margin: 8px 25px; 
 }
@@ -57,6 +57,14 @@ h2 {
 #incorrect {
     color: red;
     font-weight: bold;
+}
+
+.result {
+    font-weight: bold;
+    border-radius: 8px;
+    width: 60px;
+    text-align: center;
+
 }
 
 .question-box {
@@ -97,13 +105,11 @@ h2 {
     display: inline-block;
 }
 
-
 .answer-button:hover {
     cursor: pointer;
     box-shadow: 0 0.4rem 0.4rem;
 }
 
- 
 .correct {
     background: linear-gradient(32deg, green);
 }
@@ -164,22 +170,22 @@ h2 {
         float: right;
      }
    
-    .scores, #total-score {
+    .scores, .result, #total-score {
         display: inline-block; 
-        margin: 12px 18px;
+        margin: 10px 10px;
         
     }
     
     .score-area {
-        width: 90%;
+        width: 100%;
         font-size: 1rem;
         
         
     }
     
     #question-box {
-        height: 100px;
-        width: 90%;
+        height:80px;
+        width: 80%;
         display:flex;
         justify-content: center;
         align-items: center;
@@ -218,5 +224,11 @@ h2 {
         border-radius: 10px;
         
     }
-    
+
+    .result {
+        font-weight: bold;
+        border-radius: 4px;
+        width: 36px;
+        text-align: center;
+    }
 }

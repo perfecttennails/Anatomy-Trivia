@@ -29,7 +29,18 @@
     }
   
 ]
-
+  //Getting the score
+  let scores = document.querySelector('correct, incorrect');
+  let score = document.getElementById('total-score');
+  let q = 0;
+  let a = 0;
+  let correct = 0;
+  let incorrect =0;
+  let totalScore = 8;
+  let totalQuestion = 0;
+  
+  totalScore.innerHTML = 'Score:' + correct + '/' + totalScore;
+  
 
 // Set start
 var start = true;
@@ -38,22 +49,16 @@ var start = true;
 function iterate(id) {
 
     // Getting the result display section
-    var gameArea = document.getElementsByClassName("answer-button");
+    var gameArea = document.getElementsByClassName("result");
     gameArea[0].innerText = "";
 
     // Getting the question
     const question = document.getElementById("question");
-//const answer = Array.from(innerHTML("true"));
-
-let currentQuestions = {};
-let acceptingAnswers = true;
-let score = 0;
-let questionCounter = 0;
-let availableQuestions = [];
 
     // Setting the question text
     question.innerText = Questions[id].q;
 
+  
     // Getting the options
     const opt1 = document.getElementById("opt1");
     const opt2 = document.getElementById("opt2");
@@ -73,6 +78,7 @@ opt3.value = Questions[id].a[2].isCorrect;
 opt4.value = Questions[id].a[3].isCorrect;
 
 var selected = "";
+
 // Show selection for op1
 opt1.addEventListener("click", () => {
     opt1.style.backgroundColor = "lightgoldenrodyellow";
@@ -109,18 +115,18 @@ opt4.addEventListener("click", () => {
     selected = opt4.value;
 })
 
-// Submit for the correct answer
+ //Submit for the correct answer
 const submitAnswer = document.getElementsByClassName("btn-submit");
 
 submitAnswer[0].addEventListener("click", () => {
-    if (selected == "true") {
-        gameArea[0].innerHTML = "True \u{1F600}";
-        gameArea[0].style.backgroundColor = "green";        
-     } else {
-        gameArea[0].innerHTML = "False \u{1F44E}";
-        gameArea[0].style.backgroundColor = "red";
+   if (selected == "true") {
+       gameArea[0].innerText = "True";
+       gameArea[0].style.backgroundColor = "green";
+    } else {
+       gameArea[0].innerHTML = "False";
+       gameArea[0].style.backgroundColor = "red";
     }
-}) 
+})
 }
 
 
@@ -137,12 +143,4 @@ start = false;
 if (id < 2) {
     id++;
     iterate(id);
-    console.log(id);
-}
-// Reloads/resets the entire quiz when button is clicked:
-restartQuiz.addEventListener('click', restartQuiz);
-function restartQuiz(){
-    location.reload();
-}
-
-})
+}})
