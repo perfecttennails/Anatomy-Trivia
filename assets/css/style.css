@@ -127,6 +127,9 @@ h2 {
     margin: 60px;
 }
 
+.btn-submit{
+    background-color: rgb(230, 195, 146); 
+}
 
 .btn-restart{
      background-color: rgb(233, 233, 145); 
@@ -135,7 +138,6 @@ h2 {
 .btn-next {
     background-color: rgb(225, 178, 107);
 }
-
 
 .btn-start {
     background-color :rgb(135, 104, 38);

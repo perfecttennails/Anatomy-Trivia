@@ -2,16 +2,16 @@
     const Questions = [{
         id: 0,
         q: "How much percentage of the human body is constituted by water?",
-        a: [{ text: "40%", isCorrect: false },
-            { text: "56%", isCorrect: false },
-            { text: "66%", isCorrect: true },
-            { text: "89%", isCorrect: false }
+        a: [{ text: "40%", isCorrect: false},
+            { text: "56%", isCorrect: false},
+            { text: "66%", isCorrect: true},
+            { text: "89%", isCorrect: false},
         ]
     },
     {
         id: 1,
         q: "Is the nose of an average human being as long as the length of their thumb?",
-        a: [{ text: "", isCorrect: false, isSelected: false },
+        a: [{ text: "", isCorrect: false},
             { text: "", isCorrect: false },
             { text: "No", isCorrect: false },
             { text: "Yes", isCorrect: true }
@@ -76,69 +76,73 @@ var selected = "";
 // Show selection for op1
 opt1.addEventListener("click", () => {
     opt1.style.backgroundColor = "lightgoldenrodyellow";
-    opt2.style.backgroundColor = "lightskyblue";
-    opt3.style.backgroundColor = "lightskyblue";
-    opt4.style.backgroundColor = "lightskyblue";
+    opt2.style.backgroundColor = "white";
+    opt3.style.backgroundColor = "white";
+    opt4.style.backgroundColor = "white";
     selected = opt1.value;
 })
 
 // Show selection for op2
 opt2.addEventListener("click", () => {
-    opt1.style.backgroundColor = "lightskyblue";
+    opt1.style.backgroundColor = "white";
     opt2.style.backgroundColor = "lightgoldenrodyellow";
-    opt3.style.backgroundColor = "lightskyblue";
-    opt4.style.backgroundColor = "lightskyblue";
+    opt3.style.backgroundColor = "white";
+    opt4.style.backgroundColor = "white";
     selected = opt2.value;
 })
 
 // Show selection for op3
 opt3.addEventListener("click", () => {
-    opt1.style.backgroundColor = "lightskyblue";
-    opt2.style.backgroundColor = "lightskyblue";
+    opt1.style.backgroundColor = "white";
+    opt2.style.backgroundColor = "white";
     opt3.style.backgroundColor = "lightgoldenrodyellow";
-    opt4.style.backgroundColor = "lightskyblue";
+    opt4.style.backgroundColor = "white";
     selected = opt3.value;
 })
 
 // Show selection for op4
 opt4.addEventListener("click", () => {
-    opt1.style.backgroundColor = "lightskyblue";
-    opt2.style.backgroundColor = "lightskyblue";
-    opt3.style.backgroundColor = "lightskyblue";
+    opt1.style.backgroundColor = "white";
+    opt2.style.backgroundColor = "white";
+    opt3.style.backgroundColor = "white";
     opt4.style.backgroundColor = "lightgoldenrodyellow";
     selected = opt4.value;
 })
 
-// Grabbing the correct answer
-a.forEach(function(element, index){
-    element.textContent = q.a[index];
-});
- element[0].addEventListener("click", function(){
-     
-    if (q.isCorrect == "index") {
-        isCorrect[0].innerHTML = "True";
-        isCorrect[0].style.color = "green";
-    } else {
-        isCorrect[0].innerHTML = "False";
-        isCorrect[0].style.color = "red";
+// Submit for the correct answer
+const submitAnswer = document.getElementsByClassName("btn-submit");
+
+submitAnswer[0].addEventListener("click", () => {
+    if (selected == "true") {
+        gameArea[0].innerHTML = "True \u{1F600}";
+        gameArea[0].style.backgroundColor = "green";        
+     } else {
+        gameArea[0].innerHTML = "False \u{1F44E}";
+        gameArea[0].style.backgroundColor = "red";
     }
-})
+}) 
 }
+
 
 if (start) {
 iterate("0");
 }
 
 // Next button and method
-const next = document.getElementsByClassName('next')[0];
+const nextQuestion = document.getElementsByClassName('btn-next')[0];
 var id = 0;
 
-next.addEventListener("click", () => {
+nextQuestion.addEventListener("click", () => {
 start = false;
 if (id < 2) {
     id++;
     iterate(id);
     console.log(id);
+}
+// Reloads/resets the entire quiz when button is clicked:
+restartQuiz.addEventListener('click', restartQuiz);
+function restartQuiz(){
+    location.reload();
 }
 
 })
