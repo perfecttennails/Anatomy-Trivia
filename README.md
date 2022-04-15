@@ -1,6 +1,6 @@
 # Anatomy-Trivia
 
- View the live site [here!](https://perfecttennails.github.io/Anatomy-Trivia/game.html)
+ View the live site [here!](https://perfecttennails.github.io/Anatomy-Trivia/index.html)
 
 This puzzle is for all ages.
  30 Questions About The Coolest And Craziest Facts About The Human Body.
