@@ -29,3 +29,31 @@ Montserrat, Work Sans, sans-serif
 
 ### Media
 - The background image was taken from [Pixa Bay](https://pixabay.com/)
+
+### Testing
+
+- I have tested that this website is responsive, looks good and works as intended on the different standard screen sizes, using the devtools device toolbar in Google Chrome.
+
+- I have tested that this website works in different browsers: Chrome, Safari, Firefox, Microsot Edge.
+
+- I have confirmed that the quiz is fully functional. The different buttons do what they're supposed to do and trigger their respective functions.
+
+### Validator Testing
+- HTML
+    - No errors were found when passing through the official [W3C Validator](https://validator.w3.org/nu/)
+
+- CSS
+    - No errors were found when passing through the official [(Jigsaw) Validator](https://jigsaw.w3.org/css-validator/)
+
+- JavaScript
+    - No errors were found when passing through the [JSHint Validator](https://jshint.com/)
+
+### Unfixed Bugs
+i cannot get the score counter to work
+
+## Deployment
+
+- The site was deployed to GitHub pages. The steps to deploy are as follows:
+    - In the GitHub repository, navigate to the Settings tab
+    - From the source section drop-down menu, select the Main Branch
+    - Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.

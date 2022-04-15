@@ -1,4 +1,5 @@
 // Questions will be asked
+
     const Questions = [{
         id: 0,
         q: "How much percentage of the human body is constituted by water?",
@@ -40,17 +41,9 @@
   
 ]
   //Getting the score
-  let scores = document.querySelector('correct, incorrect');
-  let score = document.getElementById('total-score');
-  let q = 0;
-  let a = 0;
-  let correct = 0;
-  let incorrect =0;
-  let totalScore = 8;
-  let totalQuestion = 0;
   
-  totalScore.innerHTML = 'Score:' + correct + '/' + totalScore;
-  
+
+
 
 // Set start
 var start = true;
@@ -132,13 +125,16 @@ submitAnswer[0].addEventListener("click", () => {
    if (selected == "true") {
        gameArea[0].innerText = "True";
        gameArea[0].style.backgroundColor = "green";
+       incrementScore(correct)=++score;
+    
     } else {
-       gameArea[0].innerHTML = "False";
+       gameArea[0].innerText = "False";
        gameArea[0].style.backgroundColor = "red";
+       incrementScore(incorrect)=++score;
+       
     }
 })
 }
-
 
 if (start) {
 iterate("0");
@@ -162,4 +158,4 @@ document.querySelector('.btn-restart').addEventListener('click', function(){
   });
 
 
-
+  
