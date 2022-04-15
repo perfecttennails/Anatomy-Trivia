@@ -124,7 +124,7 @@ const submitAnswer = document.getElementsByClassName("btn-submit");
 submitAnswer[0].addEventListener("click", () => {
    if (selected == "true") {
        gameArea[0].innerText = "True";
-       gameArea[0].style.backgroundColor = "green";
+       gameArea[0].style.backgroundColor = "lightgreen";
        incrementScore(correct)=++score;
     
     } else {
