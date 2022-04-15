@@ -11,10 +11,10 @@
     {
         id: 1,
         q: "Is the nose of an average human being as long as the length of their thumb?",
-        a: [{ text: "", isCorrect: false},
-            { text: "", isCorrect: false },
+        a: [{ text: "Yes", isCorrect: true},
             { text: "No", isCorrect: false },
-            { text: "Yes", isCorrect: true }
+            { text: "", isCorrect: false },
+            { text: "", isCorrect: false }
         ]
     },
     {
@@ -26,7 +26,17 @@
             { text: "120 miles per hour", isCorrect: false }
         ]
   
-    }
+    },
+    {
+        id: 3,
+        q: "Cells related to which part of the body divide considerably faster when compared to the rest?",
+        a: [{ text: "Blood", isCorrect: false },
+            { text: "Skin", isCorrect: false },
+            { text: "Hair", isCorrect: true },
+            { text: "Nails", isCorrect: false }
+        ]
+  
+    },
   
 ]
   //Getting the score
@@ -140,7 +150,16 @@ var id = 0;
 
 nextQuestion.addEventListener("click", () => {
 start = false;
-if (id < 2) {
+if (id < 3) {
     id++;
     iterate(id);
-}})
+}
+})
+// Restart button and method
+document.querySelector('.btn-restart').addEventListener('click', function(){
+    window.location.reload();
+    return false;
+  });
+
+
+
