@@ -26,8 +26,8 @@ h2 {
 }
 
 #game-area {
-    height: 500px;
-    width: 70%;
+    height: 600px;
+    width: 90%;
     background-color: rgb(236, 206, 211);
     margin: 0 auto;
     border-radius: 10px 10px;
@@ -41,7 +41,7 @@ h2 {
 
 .scores, .result, .total-score{
     display: inline-block; 
-    margin: 8px 25px; 
+    margin: 20px 25px; 
 }
 
 .score-area {
@@ -68,7 +68,7 @@ h2 {
 }
 
 .question-box {
-    height: 80px;
+    height: 100px;
     width: 80%;
     justify-content: center;
     align-items: center;
@@ -89,7 +89,7 @@ h2 {
 #answer-box {
     height: 120px;
     width: 100%;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
     text-align: center;
 }
 

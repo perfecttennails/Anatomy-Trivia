@@ -49,7 +49,7 @@ Montserrat, Work Sans, sans-serif
     - No errors were found when passing through the [JSHint Validator](https://jshint.com/)
 
 ### Unfixed Bugs
-i cannot get the score counter to work
+i cannot get the score counter to work, that will be fixed in a new release.
 
 ## Deployment
 
