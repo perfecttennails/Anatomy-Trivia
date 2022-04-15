@@ -1,6 +1,6 @@
 # Anatomy-Trivia
 
- View the live site [here!]()
+ View the live site [here!](https://perfecttennails.github.io/Anatomy-Trivia/game.html)
 
 This puzzle is for all ages.
  30 Questions About The Coolest And Craziest Facts About The Human Body.
@@ -10,7 +10,7 @@ This puzzle is for all ages.
  ## Navigation
 
 
-      ### There are 4 navigation buttons:
+ ### There are 4 navigation buttons:
     - Start to begin the game 
     -Submit Answer to check the result of the question
     - Restart Game to start over from the begining
@@ -55,5 +55,5 @@ i cannot get the score counter to work
 
 - The site was deployed to GitHub pages. The steps to deploy are as follows:
     - In the GitHub repository, navigate to the Settings tab
-    - From the source section drop-down menu, select the Main Branch
-    - Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+    - Then navigate to Pages on the left from the Geneal section menu, select the Main Branch and save
+    - Once the main branch has been selected, the page should be manually refreshed with a detailed ribbon display to indicate the successful deployment.
