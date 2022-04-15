@@ -97,6 +97,7 @@ h2 {
     font-family: Montserrat, Work Sans, sans-serif;
     font-size: 100%;
     font-weight: bold;
+    color: black;
     height:50%;
     width: 80%;
     margin: 0.5%;
@@ -107,7 +108,7 @@ h2 {
 
 .answer-button:hover {
     cursor: pointer;
-    box-shadow: 0 0.4rem 0.4rem;
+    box-shadow: 0 0.4rem 0.4rem black;
 }
 
 .correct {
@@ -123,6 +124,7 @@ h2 {
     text-align: center;
     margin-right: 2%;
     margin-top: 14%;
+    font-weight: bold;
 }
 
 .btn {
@@ -135,14 +137,20 @@ h2 {
 
 .btn-submit{
     background-color: rgb(230, 195, 146); 
+    font-weight: bold;
+    color: black;
 }
 
 .btn-restart{
      background-color: rgb(233, 233, 145); 
+     font-weight: bold;
+     color: black;
 }
 
 .btn-next {
     background-color: rgb(225, 178, 107);
+    font-weight: bold;
+    color: black;
 }
 
 .btn-start {
@@ -156,12 +164,13 @@ h2 {
     
 #texted {
     text-decoration: none;
+    color: black;
 }
 
 .btn:hover {
     background-color: rgb(199, 117, 76);
     cursor: pointer;
-    box-shadow: 0.04rem 0.2rem;
+    box-shadow: 0.04rem 0.2rem black;
     
 }
 
@@ -213,6 +222,8 @@ h2 {
         height: 35px;
         font-weight: bold;
         margin: 8px;
+        font-weight: bold;
+        color: black;
     }   
 
     .btn-start {
@@ -222,6 +233,8 @@ h2 {
         font-size: 40px;
         text-decoration: none;
         border-radius: 10px;
+        font-weight: bold;
+        color: black;
         
     }
 

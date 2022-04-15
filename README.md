@@ -11,10 +11,10 @@ This puzzle is for all ages.
 
 
  ### There are 4 navigation buttons:
-    - Start to begin the game 
-    -Submit Answer to check the result of the question
-    - Restart Game to start over from the begining
-    - Next Question to hop over a question
+- Start to begin the game 
+- Submit Answer to check the result of the question
+- Restart Game to start over from the begining
+- Next Question to hop over a question
 
 
 ## Fonts 

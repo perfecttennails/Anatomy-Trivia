@@ -84,7 +84,7 @@ var selected = "";
 
 // Show selection for op1
 opt1.addEventListener("click", () => {
-    opt1.style.backgroundColor = "lightgoldenrodyellow";
+    opt1.style.backgroundColor = "yellow";
     opt2.style.backgroundColor = "white";
     opt3.style.backgroundColor = "white";
     opt4.style.backgroundColor = "white";
@@ -94,7 +94,7 @@ opt1.addEventListener("click", () => {
 // Show selection for op2
 opt2.addEventListener("click", () => {
     opt1.style.backgroundColor = "white";
-    opt2.style.backgroundColor = "lightgoldenrodyellow";
+    opt2.style.backgroundColor = "yellow";
     opt3.style.backgroundColor = "white";
     opt4.style.backgroundColor = "white";
     selected = opt2.value;
@@ -104,7 +104,7 @@ opt2.addEventListener("click", () => {
 opt3.addEventListener("click", () => {
     opt1.style.backgroundColor = "white";
     opt2.style.backgroundColor = "white";
-    opt3.style.backgroundColor = "lightgoldenrodyellow";
+    opt3.style.backgroundColor = "yellow";
     opt4.style.backgroundColor = "white";
     selected = opt3.value;
 })
@@ -114,7 +114,7 @@ opt4.addEventListener("click", () => {
     opt1.style.backgroundColor = "white";
     opt2.style.backgroundColor = "white";
     opt3.style.backgroundColor = "white";
-    opt4.style.backgroundColor = "lightgoldenrodyellow";
+    opt4.style.backgroundColor = "yellow";
     selected = opt4.value;
 })
 
