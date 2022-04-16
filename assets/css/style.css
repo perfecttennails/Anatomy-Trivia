@@ -46,7 +46,7 @@ h2 {
 
 .score-area {
     width: 80%;
-    font-size: 1.6rem;  
+    font-size: 2rem;  
 }
 
 #correct {
@@ -65,17 +65,21 @@ h2 {
     width: 100px;
     height: 30px;
     text-align: center;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+    
 }
 
 .question-box {
     height: 100px;
     width: 80%;
-    justify-content: center;
-    align-items: center;
     text-align: center;
     margin: auto;
+    margin-top: 30px;
+    margin-bottom: -30px;
     font-family: Montserrat, Work Sans, sans-serif;
-    font-weight: 300;
+    font-weight: bold;
     font-size: 175%;
 
 }
@@ -83,13 +87,14 @@ h2 {
 #question {
     font-family: Montserrat, Work Sans, sans-serif;
     font-weight: bold;
-    font-size: 175%;
+    font-size: 32px;
 }
 
 #answer-box {
     height: 120px;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+    margin-top: 0px;
     text-align: center;
 }
 
@@ -98,12 +103,14 @@ h2 {
     font-size:25px;
     font-weight: bold;
     color: black;
+    display: inline;
     height:50%;
     width: 80%;
     margin: 0.5%;
     border: 0.5px solid rgb(143, 137, 137);
     border-radius: 10px 10px;
-    display: inline-block;
+    
+   
 }
 
 .answer-button:hover {
@@ -123,15 +130,16 @@ h2 {
     font-family: Montserrat, Work Sans, sans-serif;
     text-align: center;
     margin-right: 2%;
-    margin-top: 14%;
+    margin-top: 10%;
     font-weight: bold;
+        color: black;
 }
 
 .btn {
     border: 10px;
     border-radius: 50%;
     height: 50px;
-    font-size: 16px;
+    font-size: 30px;
     margin: 60px;
 }
 
@@ -174,7 +182,7 @@ h2 {
     
 }
 
-@media screen and (max-width: 668px) {
+@media screen and (max-width: 778px) {
     #total-score {
         float: right;
      }
@@ -187,7 +195,7 @@ h2 {
     
     .score-area {
         width: 100%;
-        font-size: 1rem;
+        font-size: 2rem;
         
         
     }
@@ -206,14 +214,26 @@ h2 {
     #question {
         font-family: Montserrat, Work Sans, sans-serif;
         font-weight: bold;
-        font-size: 100%;
+        color: black;
+        font-size: 22px;
+    }
+
+    #answer-box {
+        height: 120px;
+    width: 100%;
+    margin-bottom: 24%;
+    margin-top: 0px;
+    text-align: center;
     }
 
     #quiz-navigation {
         font-family: Montserrat, Work Sans, sans-serif;
         text-align: center;
-        margin-right: 2%;
-        margin-top: 45%;
+        margin-right: 10%;
+        margin-top: 15%;
+        font-weight: bold;
+        color: black;
+        display: inline-block;
     }
 
     .btn {
@@ -240,9 +260,13 @@ h2 {
 
     .result {
         font-size: 25px;
-        border-radius: 8px;
-        width: 100px;
-        height: 30px;
-        text-align: center;
+    border-radius: 8px;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+    
     }
 }

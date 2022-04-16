@@ -40,11 +40,8 @@
     },
   
 ]
-  //Getting the score
   
-
-
-
+  
 // Set start
 var start = true;
 
@@ -125,16 +122,31 @@ submitAnswer[0].addEventListener("click", () => {
    if (selected == "true") {
        gameArea[0].innerText = "True";
        gameArea[0].style.backgroundColor = "lightgreen";
-       incrementScore(correct)=++score;
-    
+       correct[0].style.innerText = "correct";
+       correct++
+       correct.innerText = correct++
+
     } else {
        gameArea[0].innerText = "False";
        gameArea[0].style.backgroundColor = "red";
-       incrementScore(incorrect)=++score;
        
     }
 })
 }
+//Getting the score
+const scoreArea = document.querySelector("score-area")
+
+
+//initialize the count variable
+let scores = 0;
+let q = 0;
+let a = 0;
+let correct = 0;
+let incorrect = 0;
+let score = 0;
+let currentQuestion = 0;
+
+
 
 if (start) {
 iterate("0");
