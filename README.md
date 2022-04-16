@@ -61,7 +61,7 @@ Montserrat, Work Sans, sans-serif
     - No errors were found when passing through the official [(Jigsaw) Validator](https://jigsaw.w3.org/css-validator/)
 
 - JavaScript
-    - No errors were found when passing through the [JSHint Validator](https://jshint.com/)
+    - some errors were found in the counter when passing through the [JSHint Validator](https://jshint.com/)
 
 ### Unfixed Bugs
 i cannot get the score counter to work, that will be fixed in a new release.
