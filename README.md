@@ -4,8 +4,23 @@
 
 This puzzle is for all ages.
  30 Questions About The Coolest And Craziest Facts About The Human Body.
-## Front Page 
- ![Media](assets/images/Am-I-Responsive-front-page.png width=="250px")
+## Front Page with start button
+ ![Media](assets/images/Am-I-Responsive-front-page.png)
+
+ ## Game Page
+  ![Media](assets/images/Am-I-Responsive-game-area.png)
+  - Score area
+  - Question 
+  - Result
+  - Answer alternatives
+  - Submit, Next and Restart button
+
+  ## True Answer
+  ![Media](assets/images/Quiz-Page-true-answer.png)
+
+  ## False Answer
+  ![Media](assets/images/Quiz-Page-false-answer.png)
+
 
  ## Navigation
 
