@@ -26,7 +26,6 @@ const Questions = [{
     { text: "100 miles per hour", isCorrect: true },
     { text: "120 miles per hour", isCorrect: false }
     ]
-
 },
 {
     id: 3,
@@ -36,7 +35,60 @@ const Questions = [{
     { text: "Hair", isCorrect: true },
     { text: "Nails", isCorrect: false }
     ]
-
+},
+{
+    id: 4,
+    q: "The smallest bone in the human body can be compared with which real life object?",
+    a: [{ text: "A grain of rice", isCorrect: true },
+    { text: "A peanut", isCorrect: false },
+    { text: "A grain of salt", isCorrect: false },
+    { text: "A manderine peg", isCorrect: false }
+    ]
+},
+{
+    id: 5,
+    q: "In which part of the human body do the smallest bones occur?",
+    a: [{ text: "The toes", isCorrect: false },
+    { text: "The nose", isCorrect: false },
+    { text: "the fingers", isCorrect: false },
+    { text: "The ears", isCorrect: true }
+    ]
+},
+{
+    id: 6,
+    q: "Where are the smallest set of muscles in the human body found?",
+    a: [{ text: "The toes", isCorrect: false },
+    { text: "The nose", isCorrect: false },
+    { text: "the fingers", isCorrect: false },
+    { text: "The ears", isCorrect: true }
+    ]
+},
+{
+    id: 7,
+    q: "How many taste buds does our tongue comprise of?",
+    a: [{ text: "9000", isCorrect: true },
+    { text: "100", isCorrect: false },
+    { text: "3000", isCorrect: false },
+    { text: "250", isCorrect: false }
+    ]
+},
+{
+    id: 8,
+    q: "Which is the largest organ in our body?",
+    a: [{ text: "Heart", isCorrect: false },
+    { text: "Lungs", isCorrect: false },
+    { text: "Skin", isCorrect: true },
+    { text: "Liver", isCorrect: false }
+    ]
+},
+{
+    id: 9,
+    q: "What is the hardest substance in our bodies?",
+    a: [{ text: "Tooth enamel", isCorrect: true },
+    { text: "The bones", isCorrect: false },
+    { text: "The nails", isCorrect: false },
+    { text: "The joints", isCorrect: false }
+    ]
 },
 
 ]
@@ -122,12 +174,12 @@ function iterate(id) {
         if (selected == "true") {
             gameArea[0].innerText = "True";
             gameArea[0].style.backgroundColor = "lightgreen";
-            scoreArea.innerText = "correct";
+            gameArea.innerText = "correct";
             count ++
         } else {
             gameArea[0].innerText = "False";
             gameArea[0].style.backgroundColor = "red";
-            scoreArea.innerText = "incorrect";
+            gameArea.innerText = "incorrect";
             count ++
         }
     })
@@ -156,7 +208,7 @@ var id = 0;
 
 nextQuestion.addEventListener("click", () => {
     start = false;
-    if (id < 3) {
+    if (id < 12) {
         id++;
         iterate(id);
     }

@@ -32,7 +32,7 @@ h2 {
     margin: 0 auto;
     border-radius: 10px 10px;
     box-shadow: 0 0 7px;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .total-score {
@@ -60,10 +60,11 @@ h2 {
 }
 
 .result {
-    font-size: 25px;
+    font-size: 35px;
+    font-weight: bold;
     border-radius: 8px;
     width: 100px;
-    height: 30px;
+    height: 40px;
     text-align: center;
     display: block;
   margin-left: auto;
@@ -195,7 +196,7 @@ h2 {
     
     .score-area {
         width: 80%;
-        font-size: 1rem;
+        font-size: 1.5rem;
         
         
     }
@@ -230,7 +231,7 @@ h2 {
         font-family: Montserrat, Work Sans, sans-serif;
         text-align: center;
         margin-right: 10%;
-        margin-top: 15%;
+        margin-top: 7%;
         font-weight: bold;
         color: black;
         display: inline-block;
@@ -259,7 +260,8 @@ h2 {
     }
 
     .result {
-        font-size: 25px;
+    font-size: 25px;
+    font-weight: bold;
     border-radius: 8px;
     width: 100px;
     height: 30px;
