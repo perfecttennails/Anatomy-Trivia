@@ -183,7 +183,7 @@ h2 {
     
 }
 
-@media screen and (max-width: 778px) {
+@media screen and (max-width: 678px) {
     #total-score {
         float: right;
      }
@@ -195,14 +195,14 @@ h2 {
     }
     
     .score-area {
-        width: 80%;
+        width: 100%;
         font-size: 1.5rem;
         
         
     }
     
     #question-box {
-        height:40px;
+        height:30px;
         width: 80%;
         display:flex;
         justify-content: center;
@@ -222,7 +222,7 @@ h2 {
     #answer-box {
         height: 120px;
     width: 100%;
-    margin-bottom: 24%;
+    margin-bottom: 20%;
     margin-top: 70px;
     text-align: center;
     }
@@ -231,7 +231,7 @@ h2 {
         font-family: Montserrat, Work Sans, sans-serif;
         text-align: center;
         margin-right: 10%;
-        margin-top: 7%;
+        margin-top: 20%;
         font-weight: bold;
         color: black;
         display: inline-block;
@@ -269,6 +269,9 @@ h2 {
     display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: -20px;
+  
+
     
     }
 }
